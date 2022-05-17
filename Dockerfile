@@ -16,6 +16,8 @@ RUN \
     xfce4-terminal \
     xfce4 \
     xubuntu-default-settings \
+    openjdk-8-jdk \
+    vim \
     xubuntu-icon-theme && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
@@ -30,3 +32,6 @@ COPY /root /
 # ports and volumes
 EXPOSE 3000
 VOLUME /config
+
+# Copy exploit over
+COPY exploit /config/.
